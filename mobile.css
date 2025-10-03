@@ -1,0 +1,257 @@
+/* 移动端优化样式 */
+@media (max-width: 768px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    body {
+        font-size: 16px; /* 防止iOS缩放 */
+        line-height: 1.5;
+    }
+    
+    .container {
+        padding: 10px;
+        max-width: 100%;
+    }
+    
+    header {
+        padding: 15px 0;
+        border-radius: 0;
+    }
+    
+    .school-logo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .school-logo img {
+        height: 50px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .school-name {
+        font-size: 20px;
+    }
+    
+    .page-title {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+    
+    .survey-container {
+        padding: 20px 15px;
+        border-radius: 0;
+    }
+    
+    .intro-text {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+    
+    .question-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .question-description {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .options-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .option-item {
+        flex: 1 0 100%;
+        margin-bottom: 5px;
+    }
+    
+    .option-item label {
+        padding: 8px 0;
+        font-size: 15px;
+    }
+    
+    input[type="text"], 
+    input[type="email"], 
+    textarea, 
+    select {
+        padding: 12px;
+        font-size: 16px; /* 防止iOS缩放 */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    textarea {
+        min-height: 120px;
+    }
+    
+    .rating-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .rating-item {
+        flex: 0 0 48%;
+        max-width: none;
+        margin-bottom: 8px;
+    }
+    
+    .rating-item label {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+    
+    footer {
+        margin-top: 20px;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    
+    /* 针对iOS设备的优化 */
+    @supports (-webkit-touch-callout: none) {
+        input, textarea, select {
+            font-size: 16px; /* 防止iOS缩放 */
+        }
+    }
+    
+    /* 针对Android设备的优化 */
+    @supports not (-webkit-touch-callout: none) {
+        input, textarea, select {
+            font-size: 16px;
+        }
+    }
+}
+
+/* 超小屏幕设备优化 */
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+    
+    .survey-container {
+        padding: 15px 10px;
+    }
+    
+    .school-name {
+        font-size: 18px;
+    }
+    
+    .page-title {
+        font-size: 16px;
+    }
+    
+    .intro-text {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .question-title {
+        font-size: 15px;
+    }
+    
+    .rating-item {
+        flex: 0 0 100%;
+    }
+    
+    .rating-container {
+        gap: 5px;
+    }
+    
+    .rating-item label {
+        font-size: 13px;
+    }
+    
+    .option-item label {
+        font-size: 14px;
+    }
+    
+    .submit-btn {
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+
+/* 横屏模式优化 */
+@media (max-width: 768px) and (orientation: landscape) {
+    .container {
+        padding: 5px;
+    }
+    
+    .survey-container {
+        padding: 15px;
+    }
+    
+    .options-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .option-item {
+        flex: 1 0 45%;
+    }
+}
+
+/* 高分辨率屏幕优化 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+    }
+    
+    .options-container {
+        gap: 15px;
+    }
+    
+    .option-item {
+        flex: 1 0 30%;
+    }
+}
+
+/* 防止长按出现菜单 */
+.option-item label,
+.rating-item label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* 增强触摸体验 */
+button, 
+input[type="radio"], 
+input[type="checkbox"], 
+.option-item label {
+    cursor: pointer;
+}
+
+/* 移动端滚动优化 */
+html {
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    overflow-x: hidden;
+}
