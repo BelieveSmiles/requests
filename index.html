@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>厦门大学附属科技中学翔安校区问卷调查</title>
+    <link rel="stylesheet" href="quest.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="school-logo">
+                <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="20" width="40" height="30" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
+                    <polygon points="30,10 50,20 10,20" fill="#ffffff"/>
+                    <rect x="20" y="25" width="5" height="10" fill="#1e5799"/>
+                    <rect x="35" y="25" width="5" height="10" fill="#1e5799"/>
+                    <rect x="25" y="40" width="10" height="10" fill="#1e5799"/>
+                </svg>
+                <div class="school-name">厦门大学附属科技中学翔安校区</div>
+            </div>
+            <h1 class="page-title">校园学习体验调查问卷</h1>
+        </header>
+        
+        <div class="survey-container">
+            <div class="intro-text">
+                <p>亲爱的同学家长：</p>
+                <p>为了全面了解同学们在校的学习体验，改进学校教育教学工作，我们特别设计了这份调查问卷。问卷采用匿名方式，所有信息将严格保密，请根据您的实际情况填写。感谢您的参与！</p>
+            </div>
+            
+            <form id="survey-form">
+                <!-- 基本信息 -->
+                <div class="form-group">
+                    <h2 class="question-title required">基本信息</h2>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div>
+                            <label for="grade">年级</label>
+                            <select id="grade" name="grade" required>
+                                <option value="">请选择年级</option>
+                                <option value="初一">初一</option>
+                                <option value="初二">初二</option>
+                                <option value="初三">初三</option>
+                                <option value="高一">高一</option>
+                                <option value="高二">高二</option>
+                                <option value="高三">高三</option>
+                            </select>
+                            <div class="error-message" id="grade-error">请选择年级</div>
+                        </div>
+                        
+                        <div>
+                            <label for="class">班级</label>
+                            <input type="text" id="class" name="class" placeholder="例如：1班" required>
+                            <div class="error-message" id="class-error">请输入班级</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 学习体验 -->
+                <div class="form-group">
+                    <h2 class="question-title required">学习体验</h2>
+                    <p class="question-description">请根据您在本学期的学习体验，回答以下问题</p>
+                    
+                    <div class="question-item">
+                        <p class="question-title">1. 您对当前课程设置的满意度如何？</p>
+                        <div class="rating-container">
+                            <div class="rating-item">
+                                <label for="course-very-satisfied">非常满意</label>
+                                <input type="radio" id="course-very-satisfied" name="course-satisfaction" value="非常满意" required>
+                            </div>
+                            <div class="rating-item">
+                                <label for="course-satisfied">满意</label>
+                                <input type="radio" id="course-satisfied" name="course-satisfaction" value="满意">
+                            </div>
+                            <div class="rating-item">
+                                <label for="course-neutral">一般</label>
+                                <input type="radio" id="course-neutral" name="course-satisfaction" value="一般">
+                            </div>
+                            <div class="rating-item">
+                                <label for="course-unsatisfied">不满意</label>
+                                <input type="radio" id="course-unsatisfied" name="course-satisfaction" value="不满意">
+                            </div>
+                            <div class="rating-item">
+                                <label for="course-very-unsatisfied">非常不满意</label>
+                                <input type="radio" id="course-very-unsatisfied" name="course-satisfaction" value="非常不满意">
+                            </div>
+                        </div>
+                        <div class="error-message" id="course-satisfaction-error">请选择课程满意度</div>
+                    </div>
+                    
+                    <div class="question-item" style="margin-top: 20px;">
+                        <p class="question-title">2. 您认为哪些科目的教学需要改进？(可多选)</p>
+                        <div class="options-container">
+                            <div class="option-item">
+                                <label><input type="checkbox" name="improve-subjects" value="语文"> 语文</label>
+                            </div>
+                            <div class="option-item">
+                                <label><input type="checkbox" name="improve-subjects" value="数学"> 数学</label>
+                            </div>
+                            <div class="option-item">
+                                <label><input type="checkbox" name="improve-subjects" value="英语"> 英语</label>
+                            </div>
+                            <div class="option-item">
+                                <label><input type="checkbox" name="improve-subjects" value="物理"> 物理</label>
+                            </div>
+                            <div class="option-item">
+                                <label><input type="checkbox" name="improve-subjects" value="化学"> 化学</label>
+                            </div>
+                            <div class="option-item">
+                                <label><input type="checkbox" name="improve-subjects" value="生物"> 生物</label>
+                            </div>
+                            <div class="option-item">
+                                <label><input type="checkbox" name="improve-subjects" value="历史"> 历史</label>
+                            </div>
+                            <div class="option-item">
+                                <label><input type="checkbox" name="improve-subjects" value="地理"> 地理</label>
+                            </div>
+                            <div class="option-item">
+                                <label><input type="checkbox" name="improve-subjects" value="政治"> 政治</label>
+                            </div>
+                            <div class="option-item">
+                                <label><input type="checkbox" name="improve-subjects" value="体育"> 体育</label>
+                            </div>
+                            <div class="option-item">
+                                <label><input type="checkbox" name="improve-subjects" value="美术"> 美术</label>
+                            </div>
+                            <div class="option-item">
+                                <label><input type="checkbox" name="improve-subjects" value="音乐"> 音乐</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 校园环境 -->
+                <div class="form-group">
+                    <h2 class="question-title required">校园环境与设施</h2>
+                    
+                    <div class="question-item">
+                        <p class="question-title">1. 您对学校图书馆资源的满意度如何？</p>
+                        <div class="rating-container">
+                            <div class="rating-item">
+                                <label for="library-very-satisfied">非常满意</label>
+                                <input type="radio" id="library-very-satisfied" name="library-satisfaction" value="非常满意" required>
+                            </div>
+                            <div class="rating-item">
+                                <label for="library-satisfied">满意</label>
+                                <input type="radio" id="library-satisfied" name="library-satisfaction" value="满意">
+                            </div>
+                            <div class="rating-item">
+                                <label for="library-neutral">一般</label>
+                                <input type="radio" id="library-neutral" name="library-satisfaction" value="一般">
+                            </div>
+                            <div class="rating-item">
+                                <label for="library-unsatisfied">不满意</label>
+                                <input type="radio" id="library-unsatisfied" name="library-satisfaction" value="不满意">
+                            </div>
+                            <div class="rating-item">
+                                <label for="library-very-unsatisfied">非常不满意</label>
+                                <input type="radio" id="library-very-unsatisfied" name="library-satisfaction" value="非常不满意">
+                            </div>
+                        </div>
+                        <div class="error-message" id="library-satisfaction-error">请选择图书馆满意度</div>
+                    </div>
+                    
+                    <div class="question-item" style="margin-top: 20px;">
+                        <p class="question-title">2. 您认为学校哪些设施需要改进？</p>
+                        <textarea name="facility-improvement" placeholder="请在此输入您的建议..."></textarea>
+                    </div>
+                </div>
+                
+                <!-- 课外活动 -->
+                <div class="form-group">
+                    <h2 class="question-title">课外活动与社团</h2>
+                    
+                    <div class="question-item">
+                        <p class="question-title">1. 您是否参加了学校的社团活动？</p>
+                        <div class="options-container">
+                            <div class="option-item">
+                                <label><input type="radio" name="club-participation" value="是" required> 是</label>
+                            </div>
+                            <div class="option-item">
+                                <label><input type="radio" name="club-participation" value="否"> 否</label>
+                            </div>
+                        </div>
+                        <div class="error-message" id="club-participation-error">请选择是否参加社团活动</div>
+                    </div>
+                    
+                    <div class="question-item" style="margin-top: 20px;">
+                        <p class="question-title">2. 您希望学校增加哪些类型的课外活动？</p>
+                        <textarea name="activity-suggestions" placeholder="请在此输入您的建议..."></textarea>
+                    </div>
+                </div>
+                
+                <!-- 总体评价 -->
+                <div class="form-group">
+                    <h2 class="question-title required">总体评价</h2>
+                    
+                    <div class="question-item">
+                        <p class="question-title">1. 您对学校的总体满意度如何？</p>
+                        <div class="rating-container">
+                            <div class="rating-item">
+                                <label for="overall-very-satisfied">非常满意</label>
+                                <input type="radio" id="overall-very-satisfied" name="overall-satisfaction" value="非常满意" required>
+                            </div>
+                            <div class="rating-item">
+                                <label for="overall-satisfied">满意</label>
+                                <input type="radio" id="overall-satisfied" name="overall-satisfaction" value="满意">
+                            </div>
+                            <div class="rating-item">
+                                <label for="overall-neutral">一般</label>
+                                <input type="radio" id="overall-neutral" name="overall-satisfaction" value="一般">
+                            </div>
+                            <div class="rating-item">
+                                <label for="overall-unsatisfied">不满意</label>
+                                <input type="radio" id="overall-unsatisfied" name="overall-satisfaction" value="不满意">
+                            </div>
+                            <div class="rating-item">
+                                <label for="overall-very-unsatisfied">非常不满意</label>
+                                <input type="radio" id="overall-very-unsatisfied" name="overall-satisfaction" value="非常不满意">
+                            </div>
+                        </div>
+                        <div class="error-message" id="overall-satisfaction-error">请选择总体满意度</div>
+                    </div>
+                    
+                    <div class="question-item" style="margin-top: 20px;">
+                        <p class="question-title">2. 您对学校有什么其他建议或意见？</p>
+                        <textarea name="other-suggestions" placeholder="请在此输入您的建议..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="submit-container">
+                    <button type="submit" class="submit-btn" id="submit-btn" disabled>提交问卷</button>
+                </div>
+            </form>
+        </div>
+        
+        <footer>
+            <p>厦门大学附属科技中学翔安校区</p>
+            <p>© 2025 厦门大学附属科技中学翔安校区 版权所有</p>
+        </footer>
+    </div>
+
+    <script src = "quest.js"></script>
+</body>
+</html>
